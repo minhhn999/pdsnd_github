@@ -22,4 +22,16 @@ The following software requirements apply:
 - new_york_city.csv: data file download from [here](https://citibikenyc.com/system-data)
 - washington.csv: data file download from [here](https://capitalbikeshare.com/system-data)
 
+### Installation
 
+- clone this repository
+- Download 3 data files mentioned in Files used section
+- Run project by command `python bikeshare.py`
+
+### Author:
+
+[MinhNT34](https://github.com/minhhn999)
+
+### License:
+
+[MIT License](https://opensource.org/license/mit/)
