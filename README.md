@@ -14,6 +14,14 @@ The following software requirements apply:
 - A text editor, like [Sublime](https://www.sublimetext.com/) or [Atom](https://github.blog/2022-06-08-sunsetting-atom/).
 - A terminal application (Terminal on Mac and Linux or Cygwin on Windows).
 
+### Features
+
+Project includes the following features by interactive with user from command prompt:
+
+- Calculate and display for user the Popular times of travel (most common for month, day of week, hour of day)
+- Calculate and display for user the Popular stations and trip (most common for start station, end station and combination of start and end station)
+- Calculate and display for user the Trip duration (total travel time, average travel time)
+- Calculate and display for user the User info (counts of user type, counts of each gender, display earliest, month recent, most common year of birth)
 
 ### Files used
 
