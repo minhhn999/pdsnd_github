@@ -172,11 +172,31 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def display_raw_data(df):
+    """
+    Display raw data by asking user enter yes/no. Repeating display 5 rows if user enter yes and stop/not display when user enter no or something else.
+
+    Args:
+        df - Pandas DataFrame containing city data filtered by month and day
+    """
+    view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?")
+    start_loc = 0
+    total_rows = len(df.index)
+    while ((view_data.lower().strip() == 'yes') & (start_loc < total_rows)):
+        print('Ok, displaying raw data ...')
+        print(df.iloc[start_loc:start_loc + 5 if (start_loc + 5) < total_rows else total_rows ])
+        if (start_loc + 5 < total_rows):
+            start_loc += 5
+            view_data = input("Do you wish to continue?: ").lower()
+        else:
+            print("All {} rows of raw data displayed!".format(total_rows))
+    
     
 def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
+        display_raw_data(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
